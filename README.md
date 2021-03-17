@@ -1,8 +1,19 @@
 # pgplockd
 A logind locker using PGP
 
-## Proposal
+### Proposal
 This program should be runnable as a systemd user service to periodically query the user's PGP key and lock the screen if the key is locked.
+
+## Current Status
+* journald is being used for logging
+* connection to logind is being made
+* user's ~/.pgplockd file can be read for PGP Fingerprint
+* current session is being found
+* timeout loop can lock session using logind\
+
+## To Do
+* Implement an actual check for unlock status
+* Random message generator?
 
 ## Workflow
 * User logs in
